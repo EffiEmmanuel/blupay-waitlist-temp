@@ -24,7 +24,7 @@ export default function Home() {
       </Head>
       <Layout bg={heroBg} homeBg={true}>
         {/* HERO SECTION */}
-        <section className="text-center text-white mt-14 p-10">
+        <section className="text-center text-white mt-20 p-10">
           {/* HEADING */}
           <div>
             <h2 className="text-3xl md:text-4xl lg:text-4.5xl font-bold hero-headers">

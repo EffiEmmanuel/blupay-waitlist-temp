@@ -20,7 +20,7 @@ function FeatureShowcase(props) {
       <Image
         src={props.image}
         alt={props.subText}
-        className="max-w-lg lg:max-w-xl mt-10 lg:mt-0 lg:mx-0 mx-auto shadow-lg rounded-lg"
+        className="max-w-md lg:max-w-xl mt-10 lg:mt-0 lg:mx-0 mx-auto shadow-lg rounded-lg"
       />
     </div>
   );
