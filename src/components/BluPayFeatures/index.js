@@ -4,7 +4,7 @@ const { default: FeatureShowcase } = require("../FeatureShowcase");
 
 function BluPayFeatures() {
   return (
-    <section className="mt-72 lg:mt-80">
+    <section className="mt-80 lg:mt-80">
       <div className="px-14 md:px-30 lg:px-40 text-center">
         <FeatureShowcase
           firstLineText="Make Crypto Payments"
