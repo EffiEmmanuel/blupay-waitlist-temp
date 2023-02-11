@@ -50,32 +50,34 @@ export default function Home() {
           </div>
         </section>
 
-        {/* INTERSECTING PICTURE */}
-        <div className="w-full hidden text-center lg:flex md:hidden justify-center px-40 mt-32 sm:px-60">
-          <Image
-            src={blupayDashboard}
-            alt="Easily send and receive crypto with BluPay"
-            className="shadow-lg max-w-6xl mx-auto xl:max-w-6xl lg:max-w-5xl md:block sm:hidden"
-          />
-        </div>
+        <section className="bg-white">
+          {/* INTERSECTING PICTURE */}
+          <div className="w-full hidden text-center lg:flex md:hidden justify-center px-40 mt-32 sm:px-60">
+            <Image
+              src={blupayDashboard}
+              alt="Easily send and receive crypto with BluPay"
+              className="shadow-lg max-w-6xl mx-auto xl:max-w-6xl lg:max-w-5xl md:block sm:hidden"
+            />
+          </div>
 
-        {/* BLUPAY FEATURES */}
-        <BluPayFeatures />
+          {/* BLUPAY FEATURES */}
+          <BluPayFeatures />
 
-        {/* BLUPAY IS AVAILABLE GLOBALLY */}
-        <AvailableGlobally />
+          {/* BLUPAY IS AVAILABLE GLOBALLY */}
+          <AvailableGlobally />
 
-        {/* GOT QUESTIONS? */}
-        <FAQSection />
+          {/* GOT QUESTIONS? */}
+          <FAQSection />
 
-        {/* BE THE FIRST TO KNOW WHEN WE LAUNCH */}
-        <LaunchNotice />
+          {/* BE THE FIRST TO KNOW WHEN WE LAUNCH */}
+          <LaunchNotice />
 
-        {/* CONTACT US */}
-        <ReachOutToUs />
+          {/* CONTACT US */}
+          <ReachOutToUs />
 
-        {/* FOOTER */}
-        <Footer />
+          {/* FOOTER */}
+          <Footer />
+        </section>
       </Layout>
     </>
   );
