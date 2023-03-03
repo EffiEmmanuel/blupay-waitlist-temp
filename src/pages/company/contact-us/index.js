@@ -36,7 +36,7 @@ export default function AboutUs() {
       <Layout>
         {/* HERO SECTION */}
 
-        <section className="w-full text-center my-28 mb-80">
+        <section className="w-full text-center mt-44 my-28 mb-80">
           <HeadingAndSubtext
             heading="Reach out to us"
             subtext="We typically reply in less than 5 minutes"
@@ -53,7 +53,9 @@ export default function AboutUs() {
         </div>
 
         {/* GOT QUESTIONS? */}
+        {/* <div className="-mt-32 mb-30"> */}
         <FAQSection />
+        {/* </div> */}
 
         {/* FOOTER */}
         <Footer />

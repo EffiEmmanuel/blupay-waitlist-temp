@@ -53,12 +53,14 @@ html {
   background-color: #000;
   background-image: url("../../public/images/doodle.png");
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .doodleBgBlue {
   background-color: #6197ff;
   background-image: url("../../public/images/doodle.png");
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .nigeria {

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
-import heroBg from "../../public/images/hero-bg.png";
-import blupayDashboard from "../../public/images/User dashboard - Overview.png";
+import heroBg from "../../../public/images/hero-bg.png";
+import blupayDashboard from "../../../public/images/User dashboard - Overview.png";
 import ReachOutToUs from "@/components/ReachOutToUs";
 import JoinWaitlistForm from "@/forms/JoinWaitlistForm";
 import LaunchNotice from "@/components/LaunchNotice";
@@ -18,7 +18,7 @@ import {
 } from "react-icons/fa";
 import { useRef } from "react";
 
-export default function Home() {
+function Products() {
   const scrollRef = useRef(null);
 
   const scrollDown = () => {
@@ -125,3 +125,5 @@ export default function Home() {
     </>
   );
 }
+
+export default Products;

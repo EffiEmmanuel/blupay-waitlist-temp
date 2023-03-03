@@ -22,6 +22,7 @@ import {
   FaUniversalAccess,
   FaUserShield,
 } from "react-icons/fa";
+import { Fade } from "react-reveal";
 
 export default function AboutUs() {
   return (
@@ -37,33 +38,50 @@ export default function AboutUs() {
 
         <section className="w-full flex justify-center align-middle mt-0 doodleBg globally text-center lg:px-64 mb-10">
           <div className="my-auto lg:h-auto w-full lg:mx-auto doodleBgBlue text-white lg:rounded-xl py-20 px-10">
-            <HeadingAndSubtext
+            {/* <HeadingAndSubtext
               heading="About Us"
               textSize="4xl"
               subtext=" BluPay Finance simplifies the world of cryptocurrency payments by
               allowing users to send and make payments in stablecoins without the
               hassle of owning a crypto wallet. With BluPay, sending and receiving
               crypto payments is seamless, secure and accessible to everyone."
-            />
+            /> */}
+
+            <Fade up duration={800} delay={200}>
+              <h1 className="text-4xl font-bold">About Us</h1>
+            </Fade>
+            <Fade duration={800} delay={800}>
+              <p className="mt-7">
+                BluPay Finance simplifies the world of cryptocurrency payments
+                by allowing users to send and make payments in stablecoins
+                without the hassle of owning a crypto wallet. With BluPay,
+                sending and receiving crypto payments is seamless, secure and
+                accessible to everyone.
+              </p>
+            </Fade>
           </div>
         </section>
 
         <section className="text-center p-14">
-          <h2 className="text-blupayBlue text-4xl md:text-4xl lg:text-4xl mt-2 font-extrabold">
-            Our Core Values
-          </h2>
-          <p className="text-lg mx-auto lg:max-w-4xl font-normal mt-3 lg:mt-3 md:my-14 max-w-lg text-black">
-            The values we hold dear to ourself as a company.
-          </p>
+          <Fade up duration={800} delay={200}>
+            <h2 className="text-blupayBlue text-4xl md:text-4xl lg:text-4xl mt-2 font-extrabold">
+              Our Core Values
+            </h2>
+          </Fade>
+          <Fade duration={800} delay={800}>
+            <p className="text-lg mx-auto lg:max-w-4xl font-normal mt-3 lg:mt-3 md:my-14 max-w-lg text-black">
+              The values we hold dear to ourself as a company.
+            </p>
+          </Fade>
 
-          <div className="flex flex-col md:flex-row flex-wrap justify-center gap-10">
-            <ValueCard
+          <div className="flex flex-col md:flex-row flex-wrap justify-center gap-10 mt-16">
+            {/* <ValueCard
               icon={<FaPray className="mx-auto text-3xl" />}
               valueTitle="Spirituality"
               valueText="BluPay places a high importance on Spirituality, Faith and Religious
         beliefs as these play a central role in our culture and decision-making
         process."
-            />
+            /> */}
 
             <ValueCard
               icon={<FaShieldAlt className="mx-auto text-3xl" />}
@@ -102,7 +120,9 @@ export default function AboutUs() {
         </div>
 
         {/* GOT QUESTIONS? */}
-        <FAQSection />
+        <div className="-mt-32 mb-30">
+          <FAQSection />
+        </div>
 
         {/* FOOTER */}
         <Footer />

@@ -24,11 +24,11 @@ function NavLinks() {
         className="cursor-pointer md:hidden -mt-3"
       />
       <ul className="md:flex hidden justify-between w-full gap-14">
+        <NavItem link="/" linkText="Home" />
         <NavItem link="/about-us" linkText="About" />
-        {/* <NavItem link="/how-it-works" linkText="How it works" /> */}
         <NavItem link="/products" linkText="Products" />
         <NavItem link="/use-cases" linkText="Use Cases" />
-        <NavItem link="/contact-us" linkText="Contact Us" />
+        <NavItem link="/company/contact-us" linkText="Contact Us" />
       </ul>
 
       {/* Mobile Nav */}
@@ -40,6 +40,12 @@ function NavLinks() {
             className="float-right mt-12 mr-10 cursor-pointer"
           />
           <ul className="flex flex-col align-middle mt-52  justify-between w-full gap-14">
+            <Link
+              className="px-14 hover:bg-white hover:text-black py-5"
+              href="/"
+            >
+              Home
+            </Link>
             <Link
               className="px-14 hover:bg-white hover:text-black py-5"
               href="/about-us"
