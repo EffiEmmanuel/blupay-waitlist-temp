@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function Layout(props) {
   return (
-    <main>
+    <main className="h-auto bg-white">
       {/* HERO BACKGROUND */}
       <div
         className={`md:min-h-[120vh] min-h-[100vh] absolute left-0 w-full z-0 ${

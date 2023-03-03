@@ -19,11 +19,11 @@ function Navbar(props) {
 
   return (
     <div
-      className={`flex transition-[background-color] ease-in-out fixed top-0 z-50 w-full justify-between align-middle px-10 py-5 ${
-        props.noBg ? " bg-black" : ""
+      className={`flex align-middle transition-[background-color] ease-in-out fixed top-0 z-50 w-full justify-between align-middle px-10 py-5 ${
+        props.noBg ? " bg-black h-20" : ""
       } ${showBg}`}
     >
-      <div className="md:w-44 w-36">
+      <div className="md:w-36 w-36 my-auto">
         <Link href="/">
           <Image src={blupayLogo} alt="BluPay Finance" className="w-full" />
         </Link>

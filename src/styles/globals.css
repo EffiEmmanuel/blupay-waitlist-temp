@@ -46,6 +46,11 @@
 html {
   font-family: "Sora";
   font-size: small;
+  background-color: #6197ff;
+}
+
+body {
+  height: auto;
   background-color: #fff;
 }
 

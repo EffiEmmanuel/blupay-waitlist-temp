@@ -24,6 +24,7 @@ import {
 } from "react-icons/fa";
 import { Fade } from "react-reveal";
 import connect from "../../public/images/connect.svg";
+import Link from "next/link";
 
 export default function AboutUs() {
   return (
@@ -55,13 +56,29 @@ export default function AboutUs() {
           </div>
         </section> */}
 
-        <section className="w-full min-h-screen relative flex justify-center align-middle mt-0 text-center lg:px-64 mb-10">
-          <div className="w-full relative">
+        <section className="w-full min-h-[120vh] relative flex justify-center align-middle mt-0 text-center mb-10">
+          <div className="w-full relative flex justify-center">
             <Image
               src={connect}
               alt="connect"
-              className="w-full absolute top-0 "
+              className="max-w-5xl absolute -top-5 right-52 mx-auto object-contain"
             />
+            <div className="mt-32">
+              <h1 className="text-blupayBlue text-[7rem] mt-32 font-extrabold">
+                Discover
+              </h1>
+              <p className="max-w-xl">
+                Learn more about BluPay, our company culture, our vision and all
+                the awesome things we are doing here at BluPay.
+              </p>
+
+              <Link
+                href="/about"
+                className="h-12 mt-10 w-48 mx-auto rounded-lg flex justify-center align-middle text-black my-5 py-3 px-7 bg-transparent border-black border-2"
+              >
+                <span className="my-auto text-sm">Learn more</span>
+              </Link>
+            </div>
           </div>
         </section>
 
