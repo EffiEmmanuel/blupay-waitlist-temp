@@ -3,7 +3,7 @@ function FooterLinks(props) {
   const linkHeadingSlug = linkHeadingLowerCase.replace(/ /g, "-");
   return (
     <div
-      className={`w-1/4 mx-auto ${
+      className={`lg:w-1/4 w-full my-5 mx-auto ${
         props.linkHeading === "" ? "hidden lg:inline-block" : "inline-block"
       }`}
     >

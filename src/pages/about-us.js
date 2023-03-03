@@ -23,6 +23,7 @@ import {
   FaUserShield,
 } from "react-icons/fa";
 import { Fade } from "react-reveal";
+import connect from "../../public/images/connect.svg";
 
 export default function AboutUs() {
   return (
@@ -36,16 +37,8 @@ export default function AboutUs() {
       <Layout>
         {/* HERO SECTION */}
 
-        <section className="w-full flex justify-center align-middle mt-0 doodleBg globally text-center lg:px-64 mb-10">
+        {/* <section className="w-full flex justify-center align-middle mt-0 doodleBg globally text-center lg:px-64 mb-10">
           <div className="my-auto lg:h-auto w-full lg:mx-auto doodleBgBlue text-white lg:rounded-xl py-20 px-10">
-            {/* <HeadingAndSubtext
-              heading="About Us"
-              textSize="4xl"
-              subtext=" BluPay Finance simplifies the world of cryptocurrency payments by
-              allowing users to send and make payments in stablecoins without the
-              hassle of owning a crypto wallet. With BluPay, sending and receiving
-              crypto payments is seamless, secure and accessible to everyone."
-            /> */}
 
             <Fade up duration={800} delay={200}>
               <h1 className="text-4xl font-bold">About Us</h1>
@@ -59,6 +52,16 @@ export default function AboutUs() {
                 accessible to everyone.
               </p>
             </Fade>
+          </div>
+        </section> */}
+
+        <section className="w-full min-h-screen relative flex justify-center align-middle mt-0 text-center lg:px-64 mb-10">
+          <div className="w-full relative">
+            <Image
+              src={connect}
+              alt="connect"
+              className="w-full absolute top-0 "
+            />
           </div>
         </section>
 

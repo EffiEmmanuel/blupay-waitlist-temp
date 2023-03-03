@@ -16,7 +16,9 @@ import {
   FaCaretSquareDown,
   FaRegCaretSquareDown,
 } from "react-icons/fa";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
+import alert1 from "../../public/images/alert-1.svg";
+import alert2 from "../../public/images/alert-2.svg";
 
 export default function Home() {
   const scrollRef = useRef(null);
@@ -40,11 +42,18 @@ export default function Home() {
       </Head>
       <Layout bg={heroBg} homeBg={true}>
         {/* HERO SECTION */}
-        <section className="text-center text-white mt-40 p-10">
+        <section className="text-center relative text-white mt-40 p-10">
           {/* HEADING */}
           <div>
+            <Fade up duration={1000} delay={900}>
+              <Image
+                src={alert1}
+                alt="Credit alert"
+                className="w-80 relative -top-12 -right-12 lg:-right-96 md:w-96"
+              />
+            </Fade>
             <Fade up duration={800}>
-              <h2 className="text-2xl md:text-4xl lg:text-4.5xl font-bold hero-headers">
+              <h2 className="text-2xl md:text-4xl lg:text-4.5xl font-semibold hero-headers">
                 An <span className="text-blupayGreen">easy</span> and{" "}
                 <span className="text-blupayGreen">secure</span> way for
               </h2>
@@ -56,7 +65,7 @@ export default function Home() {
             </Fade>
 
             <Fade duration={800} delay={300}>
-              <h1 className="text-2xl md:text-4xl md:md-14 lg:text-4.5xl mt-2 font-bold">
+              <h1 className="text-2xl md:text-4xl md:md-14 lg:text-4.5xl mt-2 font-semibold">
                 to get paid in crypto.
               </h1>
             </Fade>
@@ -68,14 +77,24 @@ export default function Home() {
                 wallet.
               </p>
             </Fade>
+
+            <Fade up duration={1000} delay={600}>
+              <Image
+                src={alert2}
+                alt="Credit alert"
+                className="w-80 z-8 absolute -bottom-72 right-0 md:w-96 md:-bottom-44 lg:-bottom-5 lg:right-32"
+              />
+            </Fade>
           </div>
 
           {/* JOIN WAITLIST */}
-          <div className="mt-10 md:my-14">
-            <JoinWaitlistForm />
+          <div className="mt-10 relative z-10 md:my-14">
+            <Fade duration={600} delay={300}>
+              <JoinWaitlistForm />
+            </Fade>
           </div>
 
-          <div className="flex justify-center w-full mt-20 lg:hidden">
+          <div className="flex justify-center w-full mt-36 animate-bounce lg:hidden">
             <Fade duration={800} delay={1000}>
               <FaCaretDown
                 size={35}
@@ -94,11 +113,13 @@ export default function Home() {
         <section className="bg-white" ref={scrollRef}>
           {/* INTERSECTING PICTURE */}
           <div className="w-full hidden text-center lg:flex md:hidden justify-center px-40 mt-52 sm:px-60">
-            <Image
-              src={blupayDashboard}
-              alt="Easily send and receive crypto with BluPay"
-              className="shadow-lg max-w-6xl mx-auto xl:max-w-6xl lg:max-w-5xl md:block sm:hidden -mt-48"
-            />
+            <Fade up duration={600} delay={0}>
+              <Image
+                src={blupayDashboard}
+                alt="Easily send and receive crypto with BluPay"
+                className="shadow-lg max-w-6xl mx-auto xl:max-w-6xl lg:max-w-5xl md:block sm:hidden -mt-48"
+              />
+            </Fade>
           </div>
 
           {/* BLUPAY FEATURES */}

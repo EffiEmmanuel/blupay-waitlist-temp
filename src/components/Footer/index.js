@@ -47,7 +47,7 @@ function Footer() {
           </p>
         </div>
 
-        <div className="my-auto flex justify-between w-full mt-10 flex-wrap">
+        <div className="my-auto px-5 flex flex-col lg:flex-row lg:px-0 align-start justify-between w-full mt-10 flex-wrap">
           <FooterLinks
             linkHeading="Products"
             links={[
@@ -78,7 +78,7 @@ function Footer() {
           />
         </div>
       </div>
-      <div className="mt-10 flex justify-between w-full">
+      <div className="lg:mt-10 px-5 flex-col lg:flex-row lg:px-0 flex justify-between w-full">
         <FooterLinks linkHeading="" links={[""]} />
         <FooterLinks
           linkHeading="About"
@@ -90,7 +90,7 @@ function Footer() {
           isInnerLink={true}
         />
 
-        <div className="w-1/4 mx-auto">
+        <div className="lg:w-1/4 w-full my-5 mx-auto">
           <h4 className="font-semibold text-lg">For Developers</h4>
           <ul>
             <li className="mt-3 font-light italic">

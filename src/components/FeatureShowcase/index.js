@@ -4,7 +4,7 @@ import { Fade } from "react-reveal";
 function FeatureShowcase(props) {
   return (
     <div
-      className={`mt-56 flex-col lg:flex-row lg:mx-auto mx-auto flex w-full gap-x-10 lg:justify-between ${
+      className={`mt-44 flex-col lg:flex-row lg:mx-auto mx-auto flex w-full gap-x-10 lg:justify-between ${
         props.isReversed
           ? "lg:flex-row-reverse lg:text-right"
           : "lg:flex-row lg:text-left"
