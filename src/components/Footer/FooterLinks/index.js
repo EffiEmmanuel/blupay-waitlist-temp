@@ -13,7 +13,7 @@ function FooterLinks(props) {
           const linkLowerCase = link.toLowerCase();
           const linkSlug = linkLowerCase.replace(/ /g, "-");
           return (
-            <li className="mt-3 font-light">
+            <li key={linkSlug} className="mt-3 font-light">
               {props.isInnerLink ? (
                 <a href={linkHeadingSlug + "/" + linkSlug}>{link}</a>
               ) : (
