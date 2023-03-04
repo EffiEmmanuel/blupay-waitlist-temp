@@ -69,7 +69,7 @@ export default function AboutUs() {
         </section> */}
 
         <section className="w-full min-h-[120vh] mt-24  relative flex justify-center align-middle text-center mb-10">
-          <div className="w-full relative flex justify-center">
+          <div className="w-full relative flex justify-center overflow-hidden">
             <Image
               src={connect}
               alt="connect"
@@ -84,14 +84,14 @@ export default function AboutUs() {
                 the awesome things we are doing here at BluPay.
               </p>
 
-              <Link
-                href="/about"
+              <button
+                onClick={scrollDown}
                 className="h-14 mt-10 w-48 mx-auto rounded-lg flex justify-center align-middle text-black my-5 py-3 px-7 bg-transparent border-black border-2"
               >
                 <span cl assName="my-auto text-sm">
                   Learn more
                 </span>
-              </Link>
+              </button>
               <div className="flex justify-center w-full mt-36 animate-bounce lg:hidden">
                 <Fade duration={800} delay={1000}>
                   <FaCaretDown
