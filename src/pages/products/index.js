@@ -64,7 +64,7 @@ export default function AboutUs() {
           <Image
             src={boltIcon}
             alt="Fast transaction speeds"
-            className="w-16 h-16 lg:w-24 lg:h-24 lg:left-64 xl:left-80 absolute bottom-64 left-20"
+            className="w-16 h-16 lg:w-24 lg:h-24 lg:left-64 xl:left-80 absolute bottom-96 left-20"
           />
           <div className="w-full relative flex justify-center overflow-hidden">
             <div className="mt-24">
@@ -81,7 +81,7 @@ export default function AboutUs() {
               >
                 <span className="cursor-pointer my-auto text-sm">See more</span>
               </span>
-              <div className="flex justify-center w-full mt-36 animate-bounce lg:hidden">
+              <div className="flex absolute bottom-44 justify-center w-full mt-36 animate-bounce lg:hidden">
                 <Fade duration={800} delay={1000}>
                   <FaCaretDown
                     size={35}
