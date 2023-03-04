@@ -14,6 +14,7 @@ import HeadingAndSubtext from "@/components/HeadingAndSubtext";
 import ValueCard from "@/components/ValueCard";
 import {
   FaAccessibleIcon,
+  FaCaretDown,
   FaChalkboardTeacher,
   FaLightbulb,
   FaPray,
@@ -25,8 +26,18 @@ import {
 import { Fade } from "react-reveal";
 import connect from "../../public/images/connect.svg";
 import Link from "next/link";
+import { useRef } from "react";
 
 export default function AboutUs() {
+  const scrollRef = useRef(null);
+
+  const scrollDown = () => {
+    window.scrollTo({
+      top: scrollRef.current.offsetTop - 120,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <>
       <Head>
@@ -35,6 +46,7 @@ export default function AboutUs() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      {/* <body> */}
       <Layout>
         {/* HERO SECTION */}
 
@@ -56,15 +68,15 @@ export default function AboutUs() {
           </div>
         </section> */}
 
-        <section className="w-full min-h-[120vh] relative flex justify-center align-middle mt-0 text-center mb-10">
+        <section className="w-full min-h-[120vh] mt-24  relative flex justify-center align-middle text-center mb-10">
           <div className="w-full relative flex justify-center">
             <Image
               src={connect}
               alt="connect"
-              className="max-w-5xl absolute -top-5 right-52 mx-auto object-contain"
+              className="max-w-4xl absolute -top-5  mx-auto object-contain"
             />
             <div className="mt-32">
-              <h1 className="text-blupayBlue text-[7rem] mt-32 font-extrabold">
+              <h1 className="text-blupayBlue text-[4rem] lg:text-[7rem] mt-32 font-extrabold">
                 Discover
               </h1>
               <p className="max-w-xl">
@@ -74,15 +86,31 @@ export default function AboutUs() {
 
               <Link
                 href="/about"
-                className="h-12 mt-10 w-48 mx-auto rounded-lg flex justify-center align-middle text-black my-5 py-3 px-7 bg-transparent border-black border-2"
+                className="h-14 mt-10 w-48 mx-auto rounded-lg flex justify-center align-middle text-black my-5 py-3 px-7 bg-transparent border-black border-2"
               >
-                <span className="my-auto text-sm">Learn more</span>
+                <span cl assName="my-auto text-sm">
+                  Learn more
+                </span>
               </Link>
+              <div className="flex justify-center w-full mt-36 animate-bounce lg:hidden">
+                <Fade duration={800} delay={1000}>
+                  <FaCaretDown
+                    size={35}
+                    style={{
+                      padding: "4px",
+                      borderWidth: "1px",
+                      borderRadius: "50%",
+                      cursor: "pointer",
+                    }}
+                    onClick={scrollDown}
+                  />
+                </Fade>
+              </div>
             </div>
           </div>
         </section>
 
-        <section className="text-center p-14">
+        <section className="text-center p-14 -mt-32" ref={scrollRef}>
           <Fade up duration={800} delay={200}>
             <h2 className="text-blupayBlue text-4xl md:text-4xl lg:text-4xl mt-2 font-extrabold">
               Our Core Values
@@ -147,6 +175,7 @@ export default function AboutUs() {
         {/* FOOTER */}
         <Footer />
       </Layout>
+      {/* </body> */}
     </>
   );
 }
