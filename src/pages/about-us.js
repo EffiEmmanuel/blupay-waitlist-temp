@@ -74,19 +74,21 @@ export default function AboutUs() {
               >
                 <span className="cursor-pointer my-auto text-sm">See more</span>
               </span>
-              <div className="flex justify-center w-full mt-36 animate-bounce lg:hidden">
-                <Fade duration={800} delay={1000}>
-                  <FaCaretDown
-                    size={35}
-                    style={{
-                      padding: "4px",
-                      borderWidth: "1px",
-                      borderRadius: "50%",
-                      cursor: "pointer",
-                    }}
-                    onClick={scrollDown}
-                  />
-                </Fade>
+              <div className="flex absolute bottom-44 justify-center w-full mt-36 animate-bounce lg:hidden">
+                <div className="mx-auto flex justify-center w-full">
+                  <Fade duration={800} delay={1000}>
+                    <FaCaretDown
+                      size={35}
+                      style={{
+                        padding: "4px",
+                        borderWidth: "1px",
+                        borderRadius: "50%",
+                        cursor: "pointer",
+                      }}
+                      onClick={scrollDown}
+                    />
+                  </Fade>
+                </div>
               </div>
             </div>
           </div>
