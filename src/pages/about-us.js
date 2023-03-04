@@ -50,31 +50,15 @@ export default function AboutUs() {
       <Layout>
         {/* HERO SECTION */}
 
-        {/* <section className="w-full flex justify-center align-middle mt-0 doodleBg globally text-center lg:px-64 mb-10">
-          <div className="my-auto lg:h-auto w-full lg:mx-auto doodleBgBlue text-white lg:rounded-xl py-20 px-10">
-
-            <Fade up duration={800} delay={200}>
-              <h1 className="text-4xl font-bold">About Us</h1>
-            </Fade>
-            <Fade duration={800} delay={800}>
-              <p className="mt-7">
-                BluPay Finance simplifies the world of cryptocurrency payments
-                by allowing users to send and make payments in stablecoins
-                without the hassle of owning a crypto wallet. With BluPay,
-                sending and receiving crypto payments is seamless, secure and
-                accessible to everyone.
-              </p>
-            </Fade>
-          </div>
-        </section> */}
-
         <section className="w-full min-h-[120vh] mt-24  relative flex justify-center align-middle text-center mb-10">
           <div className="w-full relative flex justify-center overflow-hidden">
-            <Image
-              src={connect}
-              alt="connect"
-              className="max-w-4xl absolute -top-5  mx-auto object-contain"
-            />
+            <Fade duration={1000} delay={300}>
+              <Image
+                src={connect}
+                alt="connect"
+                className="max-w-4xl absolute -top-10 -ml-32 object-contain"
+              />
+            </Fade>
             <div className="mt-32">
               <h1 className="text-blupayBlue text-[4rem] lg:text-[7rem] mt-32 font-extrabold">
                 Discover
@@ -84,14 +68,12 @@ export default function AboutUs() {
                 the awesome things we are doing here at BluPay.
               </p>
 
-              <button
+              <span
                 onClick={scrollDown}
-                className="h-14 mt-10 w-48 mx-auto rounded-lg flex justify-center align-middle text-black my-5 py-3 px-7 bg-transparent border-black border-2"
+                className="h-14 cursor-pointer mt-10 w-48 mx-auto rounded-lg flex justify-center align-middle text-black my-5 py-3 px-7 bg-transparent border-black border-2"
               >
-                <span cl assName="my-auto text-sm">
-                  Learn more
-                </span>
-              </button>
+                <span className="cursor-pointer my-auto text-sm">See more</span>
+              </span>
               <div className="flex justify-center w-full mt-36 animate-bounce lg:hidden">
                 <Fade duration={800} delay={1000}>
                   <FaCaretDown
@@ -110,7 +92,27 @@ export default function AboutUs() {
           </div>
         </section>
 
-        <section className="text-center p-14 -mt-32" ref={scrollRef}>
+        <section
+          ref={scrollRef}
+          className="w-full flex justify-center align-middle mt-0 doodleBg globally text-center lg:px-64 mb-10"
+        >
+          <div className="my-auto lg:h-auto w-full lg:mx-auto doodleBgBlue text-white lg:rounded-xl py-20 px-10">
+            <Fade up duration={800} delay={200}>
+              <h1 className="text-4xl font-bold">About Us</h1>
+            </Fade>
+            <Fade duration={800} delay={800}>
+              <p className="mt-7">
+                BluPay Finance simplifies the world of cryptocurrency payments
+                by allowing users to send and make payments in stablecoins
+                without the hassle of owning a crypto wallet. With BluPay,
+                sending and receiving crypto payments is seamless, secure and
+                accessible to everyone.
+              </p>
+            </Fade>
+          </div>
+        </section>
+
+        <section className="text-center p-14 mt-14">
           <Fade up duration={800} delay={200}>
             <h2 className="text-blupayBlue text-4xl md:text-4xl lg:text-4xl mt-2 font-extrabold">
               Our Core Values

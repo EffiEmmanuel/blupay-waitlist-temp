@@ -17,7 +17,8 @@ function FeatureShowcase(props) {
             <br />
             {props.secondLineText}
           </h2>
-          <p className="mt-5 lg:mt-10">{props.subText}</p>
+          <p className="mt-5 lg:mt-10 lg:max-w-lg">{props.subText}</p>
+          {props?.button && { ...props?.button }}
         </div>
       </Fade>
       <Fade left duration={1000}>
